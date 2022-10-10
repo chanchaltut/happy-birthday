@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Abyssinica+SIL&family=Dancing+Script&family=Work+Sans:wght@100;400&display=swap");
+
+:root {
+  --var-main-bg: linear-gradient(45deg, rgb(181 211 225 / 12%), #ff22902e);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Abyssinica SIL", serif;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+body {
+  position: relative;
+  height: 100vh;
+  filter: saturate(1);
+  overflow-x: hidden;
+  /* background: url(/img/bg-main.webp) no-repeat center top/cover; */
+  background-image: radial-gradient(
+      circle at 67% 83%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 1%,
+      transparent 1%,
+      transparent 5%,
+      transparent 5%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 24% 80%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 27%,
+      transparent 27%,
+      transparent 63%,
+      transparent 63%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 23% 5%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 26%,
+      transparent 26%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 21% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 35%,
+      transparent 35%,
+      transparent 45%,
+      transparent 45%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 10% 11%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 21%,
+      transparent 21%,
+      transparent 81%,
+      transparent 81%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 19% 61%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 20%,
+      transparent 20%,
+      transparent 61%,
+      transparent 61%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 13% 77%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 63%,
+      transparent 63%,
+      transparent 72%,
+      transparent 72%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at 30% 93%,
+      hsla(317, 0%, 96%, 0.05) 0%,
+      hsla(317, 0%, 96%, 0.05) 33%,
+      transparent 33%,
+      transparent 82%,
+      transparent 82%,
+      transparent 100%
+    ),
+    linear-gradient(90deg, rgb(169, 107, 241), rgb(255, 147, 147));
+}
+
+.jhalar {
+  position: absolute;
+  top: 10%;
+  left: -0.35rem;
+  width: 100vw;
+  height: 6rem;
+  opacity: 0;
+  transform: scale(0);
+  background: url(/img/jhalar.png) repeat center center/contain;
+  mix-blend-mode: plus-lighter;
+  animation: stars 1s ease forwards;
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  position: relative;
+}
+
+h1::before {
+  content: "";
+  position: absolute;
+  left: -4.35rem;
+  width: 6rem;
+  height: 6rem;
+  background: url(/img/party-papers.gif) no-repeat center center/contain;
+  animation: stars 1s ease forwards;
+}
+
+h1::after {
+  content: "";
+  position: absolute;
+  right: -4.35rem;
+  width: 6rem;
+  height: 6rem;
+  transform: scaleX(-1) !important;
+  background: url(/img/party-papers.gif) no-repeat center center/contain;
+
+  animation: stars 1s ease forwards;
+}
+
+.hero h1 {
+  position: relative;
+  margin: 3rem 0 1rem 0;
+  z-index: 10;
+  font-size: 3.5rem;
+  font-family: "Dancing Script", cursive;
+  text-shadow: 1px 1px 5px black;
+}
+
+.hero p {
+  margin: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.central-image img {
+  height: 20rem;
+  max-width: 20rem;
+  opacity: 0;
+  transform: scale(0);
+  margin: -1rem 2rem 2rem 0;
+  animation: appear 1s ease 1s forwards;
+}
+
+.wish {
+  background: var(--var-main-bg);
+  border-radius: 0.5rem;
+  position: relative;
+  margin: 0 1rem;
+  box-shadow: 2px 2px 20px black;
+  padding-top: 0.5rem;
+  text-align: center;
+}
+
+.wish span {
+  font-size: 1.5rem;
+}
+
+.wish p:nth-child(2) {
+  text-decoration: underline;
+}
+
+.form-box {
+  margin: 1rem;
+  max-width: 100%;
+}
+
+.input-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input-area input {
+  border: none;
+  box-shadow: 1px 1px 10px 0px black;
+  font-size: 1.5rem;
+  background: var(--var-main-bg);
+  color: white;
+  margin: 1rem;
+  padding: 0.25rem;
+  text-align: center;
+  border-radius: 0.5rem;
+}
+
+input::placeholder {
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+}
+
+:focus-visible {
+  outline: none;
+}
+
+.input-area button {
+  border: none;
+  font-size: 1.5rem;
+  background: var(--var-main-bg);
+  color: white;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  box-shadow: 1px 1px 10px 0px black;
+}
+
+.music {
+  display: grid;
+  place-items: center;
+}
+
+audio {
+  max-width: 90%;
+}
+
+.share-btn {
+  border: none;
+  border-radius: 1rem;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 1px 1px 10px 0px black;
+}
+
+.hide {
+  display: none;
+}
+
+.share-btn span {
+  background: var(--var-main-bg);
+  border: 2px solid white;
+  border-radius: 10px;
+  padding: 0.3rem 2rem;
+  text-transform: uppercase;
+}
+
+.share-btn i {
+  margin: 1rem;
+  font-size: 2rem;
+}
+
+/* Key Frames */
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+    top: 100%;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    top: 0%;
+    transform: scale(1);
+  }
+}
+
+@keyframes stars {
+  0% {
+    opacity: 0;
+    top: -100%;
+    transform: scale(0);
+  }
+  100% {
+    opacity: 1;
+    top: 0%;
+    transform: scale(1);
+  }
+}
+
+/* Media Query Starts */
+
+@media (max-width: 800px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .hero h1 {
+    font-size: 2.8rem;
+  }
+
+  .input-area {
+    flex-direction: column;
+  }
+
+  .input-area input {
+    margin: 1rem 0;
+    max-width: 90%;
+  }
+
+  @media (max-width: 400px) {
+    h1::before {
+      left: -2.3rem;
+      margin-top: 1rem;
+    }
+
+    h1::after {
+      right: -2.3rem;
+      margin-top: 1rem;
+    }
+  }
+}
