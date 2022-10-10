@@ -21,7 +21,6 @@ body {
   height: 100vh;
   filter: saturate(1);
   overflow-x: hidden;
-  /* background: url(/img/bg-main.webp) no-repeat center top/cover; */
   background-image: radial-gradient(
       circle at 67% 83%,
       hsla(317, 0%, 96%, 0.05) 0%,
@@ -180,7 +179,7 @@ h1::after {
 }
 
 .wish p:nth-child(2) {
-  text-decoration: underline;
+  font-style: italic;
 }
 
 .form-box {
@@ -314,15 +313,13 @@ audio {
     max-width: 90%;
   }
 
-  @media (max-width: 400px) {
+  @media (max-width: 393px) {
     h1::before {
-      left: -2.3rem;
-      margin-top: 1rem;
+      left: -3.3rem;
     }
 
     h1::after {
-      right: -2.3rem;
-      margin-top: 1rem;
+      right: -3.3rem;
     }
   }
 }

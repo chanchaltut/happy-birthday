@@ -13,7 +13,6 @@ sname.addEventListener("click", function () {
 });
 
 window.addEventListener("keydown", (e) => {
-  console.log("the button that was pressed is: ", e.key);
   if (e.key == "Enter") {
     goBTN.click();
   }
@@ -36,17 +35,18 @@ const createSubURL = (sParam) => {
 };
 
 window.jqs = createSubURL;
-let name = decodeURI(createSubURL("bl"));
+let Name = decodeURI(createSubURL("bl"));
 if (typeof createSubURL("bl") === "undefined") {
-  name = "";
+  Name = "";
 }
 
 const checkName = () => {
-  if (name.length !== 0) {
-    name = name.replace(/-/g, " ");
-    yourName.textContent = name;
+  if (Name.length !== 0) {
+    Name = Name.replace(/-/g, " ");
+    yourName.textContent = Name;
     msg.textContent =
-      sname.value + " is wishing you the best of your fortune this Birthday :)";
+      sname.value +
+      " is wishing you a cheerful birthday and a splendid year ahead :)";
   }
 };
 
@@ -68,7 +68,7 @@ const createGreeting = () => {
     formBox.style.display = "none";
     yourName.textContent = sname;
     msg.textContent =
-      " is wishing you the best of your fortune this Birthday :)";
+      " is wishing you a cheerful birthday and a splendid year ahead :)";
     window.scrollTo(0, 0);
   } else {
     alert("Please Type Your Name First");
