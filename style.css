@@ -164,14 +164,18 @@ h1::after {
   animation: appear 1s ease 1s forwards;
 }
 
-.wish {
+.wish,
+.name-box {
   background: var(--var-main-bg);
   border-radius: 0.5rem;
   position: relative;
-  margin: 0 1rem;
+  margin: 1rem;
   box-shadow: 2px 2px 20px black;
   padding-top: 0.5rem;
-  /* text-align: center; */
+}
+
+.name-box {
+  display: none;
 }
 
 .wish span {
@@ -202,7 +206,7 @@ p span {
 }
 
 .fa-quote-left {
-  margin-left: 1rem;
+  margin-left: 2rem;
   margin-bottom: 0.5rem;
   font-size: 2rem;
 }
@@ -344,13 +348,18 @@ audio {
     max-width: 90%;
   }
 
-  @media (max-width: 393px) {
-    h1::before {
-      left: -3.3rem;
-    }
+  .wish,
+  .name-box {
+    min-width: 92%;
+  }
+}
 
-    h1::after {
-      right: -3.3rem;
-    }
+@media (max-width: 393px) {
+  h1::before {
+    left: -3.3rem;
+  }
+
+  h1::after {
+    right: -3.3rem;
   }
 }

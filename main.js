@@ -7,6 +7,7 @@ const goBTN = document.querySelector("#go-btn");
 let sname = document.querySelector("#nameinput");
 const wish = document.querySelector(".wish");
 const audio = document.getElementById("my_audio");
+const nameBox = document.querySelector(".name-box");
 
 sname.addEventListener("click", function () {
   audio.play();
@@ -69,6 +70,7 @@ const createGreeting = () => {
     yourName.textContent = sname;
     msg.textContent =
       " is wishing you a cheerful birthday and a splendid year ahead :)";
+    nameBox.style.display = "block";
     window.scrollTo(0, 0);
   } else {
     alert("Please Type Your Name First");
